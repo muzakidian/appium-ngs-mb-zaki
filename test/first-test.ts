@@ -16,33 +16,21 @@ const options = {
     logLevel: 'info' as const,
     capabilities
 };
-
 async function runTest() {
-
     const driver = await remote(options);
-
     try {
-
         console.log('Mobile Banking berhasil dibuka');
-
         await driver.pause(3000);
-
         const currentPackage = await driver.getCurrentPackage();
-
         console.log(`Current package: ${currentPackage}`);
-
         if (currentPackage !== 'com.dwidasa.bwk.mb.android') {
             throw new Error(
                 `Aplikasi yang terbuka salah. Current package: ${currentPackage}`
             );
         }
-
         console.log('PASS - Mobile Banking berhasil dibuka');
-
     } finally {
-
         await driver.deleteSession();
-
     }
 }
 runTest().catch((error) => {
