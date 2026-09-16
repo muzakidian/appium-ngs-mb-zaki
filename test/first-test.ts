@@ -6,7 +6,6 @@ const capabilities = {
     'appium:udid': 'RRCY205453P',
     'appium:deviceName': 'Samsung SM-A556E',
     'appium:appPackage': 'com.dwidasa.bwk.mb.android',
-    'appium:appActivity': 'com.ccb.overseas.home.view.HKHomeActivity',
     'appium:noReset': true
 };
 

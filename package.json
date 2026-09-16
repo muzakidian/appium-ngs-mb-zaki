@@ -11,9 +11,15 @@
     "@wdio/spec-reporter": "^9.31.2",
     "@wdio/visual-service": "^10.1.0",
     "appium-uiautomator2-driver": "^8.7.0",
-    "expect-webdriverio": "^6.0.10"
+    "expect-webdriverio": "^6.0.10",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3",
+    "webdriverio": "9.31.9"
   },
   "scripts": {
+    "test": "npm run wdio",
+    "test:launch": "npm run wdio -- --spec ./test/specs/launch.spec.ts",
+    "typecheck": "tsc --noEmit",
     "wdio": "wdio run ./wdio.conf.ts"
   }
 }
